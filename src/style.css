@@ -300,22 +300,24 @@ ul {
   color: #c9c1aa;
   /* Light beige subtitle color */
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-size: 14px;
 }
 
 .why-choose-us .section-title {
   color: #e8e3d3;
   /* Light beige heading color */
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   margin-top: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+  max-width: 950px;
 }
 
 .why-choose-us .features {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .feature-item {
