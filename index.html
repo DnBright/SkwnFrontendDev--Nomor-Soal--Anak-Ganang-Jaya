@@ -1,29 +1,264 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Furniture Mockup - Skeleton</title>
+  <title>Dekoor - Furniture Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css" />
 </head>
-<body>
-  <div id="app">
-    <header class="navbar">
-      <h1>Furniture Store</h1>
-    </header>
-    
-    <main class="container">
-      <section class="furniture-list" id="furniture-list">
-        <!-- Data furniture dari API akan dimuat ke sini oleh JQuery -->
-        <p class="loading">Memuat data furniture...</p>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <p>&copy; 2026 SkwnFrontendDev Project</p>
-    </footer>
-  </div>
-  
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="/images/logo (1).png" alt="Dekoor Logo">
+        <span>Dekoor</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Furniture <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a></li>
+        <li><a href="#">Partnerships</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-secondary">Sign Up</button>
+        <button class="btn btn-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C15.3137 2 18 4.68629 18 8V10H19C20.1046 10 21 10.8954 21 12V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V12C3 10.8954 3.89543 10 5 10H6V8C6 4.68629 8.68629 2 12 2ZM16 10V8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8V10H16ZM12 14C11.4477 14 11 14.4477 11 15V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V15C13 14.4477 12.5523 14 12 14Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text-wrapper">
+        <h1 class="fade-up">The kind of<br><span class="highlight">furniture</span> you have<br>been looking for</h1>
+        <div class="hero-actions fade-up" style="animation-delay: 0.2s;">
+          <button class="btn btn-primary" id="search-catalog">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            SEARCH CATALOG
+          </button>
+          <button class="btn btn-outline">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            WATCH VIDEOS
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/images/Future List 1.png" alt="Pösht Sofa" class="fade-in">
+      <div class="hero-card slide-up">
+        <span class="price">$329</span>
+        <h2>Pösht Sofa</h2>
+        <a href="#" class="view-details">VIEW DETAILS
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-choose-us section-dark fade-in-on-scroll">
+    <div class="container">
+      <p class="subtitle">WHY CHOOSE US?</p>
+      <h2 class="section-title text-light">We care about details and the quality<br>of our products</h2>
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg></div>
+          <p>MANUFACTURED WITH<br>QUALITY MATERIALS</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">5</div>
+          <p>5 YEARS OF WARRANTY<br>FOR EACH PRODUCT</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg></div>
+          <p>20 YEARS OF EXPERTISE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners container fade-in-on-scroll">
+    <div class="partner-title">
+      <h3>25+</h3>
+      <p>PARTNERED BRANDS</p>
+    </div>
+    <div class="partner-logos">
+      <img src="/images/company logos.png" alt="Company Logos">
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories container fade-in-on-scroll">
+    <div class="category-images">
+      <img src="/images/Rectangle 6796.png" class="img-1 anim-delay-1">
+      <img src="/images/detail product name.png" class="img-2 anim-delay-2">
+      <img src="/images/Rectangle 6792.png" class="img-3 anim-delay-3">
+    </div>
+    <div class="category-content">
+      <p class="subtitle">Categories</p>
+      <h2 class="section-title">Furniture Sets<br>Recommendations</h2>
+
+      <div class="category-accordion">
+        <div class="accordion-item">
+          <h4>Bedroom</h4>
+        </div>
+        <div class="accordion-item active">
+          <h4>Living Room</h4>
+          <p>Enjoy a great living room simulation with your family. Designs created for increased comfortability.</p>
+        </div>
+        <div class="accordion-item">
+          <h4>Home Office</h4>
+        </div>
+        <div class="accordion-item">
+          <h4>Gaming Room</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLER -->
+  <section class="best-seller section-dark fade-in-on-scroll">
+    <div class="container">
+      <div class="best-seller-header">
+        <div>
+          <p class="subtitle">OUR PRODUCTS</p>
+          <h2 class="section-title text-light">This month's best seller</h2>
+        </div>
+        <button class="btn btn-primary">SEE MORE</button>
+      </div>
+
+      <div class="seller-carousel" id="dummy-carousel">
+        <p class="loading text-light">Memuat produk API...</p>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="nav-btn prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg></button>
+        <button class="nav-btn next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter fade-in-on-scroll">
+    <div class="container newsletter-container">
+      <div class="newsletter-content">
+        <p class="subtitle">LIMITED DEALS</p>
+        <h2 class="section-title">Become a member and get 10% off of<br>your first purchase</h2>
+
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email here" required>
+          <button type="submit" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="/images/logo (1).png" alt="Dekoor Logo">
+          <span>Dekoor</span>
+        </div>
+        <p>Dekoor is a furniture company created to fulfill the needs of family with aesthetic feeling in their
+          furniture. Always pay attention to details and give clear communication for the customers. Priority of our
+          design is comfortability.</p>
+        <p class="copyright">©Copyright 2026 Dekoor</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Care guide</a></li>
+            <li><a href="#">Redeem warranty</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>Social Media</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our story</a></li>
+            <li><a href="#">Designer</a></li>
+            <li><a href="#">Craftsmanship</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
