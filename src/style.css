@@ -23,15 +23,6 @@ body {
   overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Poppins', sans-serif;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -299,35 +290,59 @@ ul {
 }
 
 /* Why Choose Us */
+.why-choose-us {
+  background-color: #353028;
+  /* Specific dark brown in the mockup */
+  padding: 80px 0;
+}
+
+.why-choose-us .subtitle {
+  color: #c9c1aa;
+  /* Light beige subtitle color */
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.why-choose-us .section-title {
+  color: #e8e3d3;
+  /* Light beige heading color */
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
 .why-choose-us .features {
   display: flex;
-  gap: 60px;
-  margin-top: 40px;
+  gap: 40px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .feature-icon {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 18px;
+  color: #e8e3d3;
 }
 
 .feature-item p {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #e8e3d3;
 }
 
 /* Partners */
